@@ -13,7 +13,7 @@
     }
   }
   
-  .App-header {
+  .Title {
     background-color: #FFFFFF;
     min-height: 100vh;
     display: flex;
@@ -46,7 +46,7 @@
     text-align: left;
   }
   
-  .top-left-text {
+  .language-chooser {
     position: absolute; /* Set the position of the text to absolute */
     top: 10px; /* Adjust the top position */
     left: calc(150px + 150vmin); /* Adjust the left position */
@@ -61,4 +61,70 @@
       transform: rotate(360deg);
     }
   }
+
+  /*
   
+  */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif; /* Replace with the font of your choice */
+    background: #FFF; /* Or any color that matches your design */
+    color: #000; /* Or any color that matches your design */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+}
+
+.language-selector {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.language-selector img {
+    margin-left: 8px;
+    width: 24px; /* Adjust as necessary */
+    height: auto;
+}
+
+main h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color:#333;
+    text-align: left;
+}
+
+main p {
+    font-size: 1.5em; /* Adjust as necessary */
+    color: #555; /* Or any color that matches your design */
+    margin-bottom: 2em;
+}
+
+.get-started-btn {
+    padding: 10px 20px;
+    font-size: 1em; /* Adjust as necessary */
+    color: #FFF;
+    background-color: #000; /* Or any color that matches your design */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.get-started-btn:hover {
+    background-color: #333; /* Or any color that matches your design */
+}
