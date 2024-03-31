@@ -17,14 +17,16 @@ function App() {
                     <span>English</span>
                 </div>
             </header>
-            <main>
-                <h1>The billing assistant your <br></br> health deserves.</h1>
-                <p>Your Guide to Clear and Accurate Medical Billing</p>
-                <div>
-                  <button className="get-started-btn"onClick={openPopup}>Get Started</button>
-                  <ImportPdf isOpen={isPopupOpen} onClose={closePopup} />
-                </div>
-            </main>
+            <div className="make-bigger">
+              <main>
+                  <h1>The billing assistant your <br></br> health deserves.</h1>
+                  <p>Your Guide to Clear and Accurate Medical Billing</p>
+                  <div>
+                    <button className="get-started-btn"onClick={openPopup}>Get Started</button>
+                    <ImportPdf isOpen={isPopupOpen} onClose={closePopup} />
+                  </div>
+              </main>
+            </div>
         </div>
     </body>
   );

@@ -135,3 +135,7 @@ main p {
 .get-started-btn:hover {
     background-color: #333; /* Or any color that matches your design */
 }
+
+.make-bigger {
+  transform: scale(1.5)
+}
