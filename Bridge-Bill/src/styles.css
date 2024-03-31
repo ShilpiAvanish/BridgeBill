@@ -102,27 +102,34 @@ header {
 }
 
 main h1 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
-    color:#333;
+    font-size: 3.5em;
+    font-weight:750;
+    margin-bottom: 0.25em;
+    color:#000;
     text-align: left;
+    position: relative;
+    right: 10%;
+    letter-spacing: -3px;
 }
 
 main p {
     font-size: 1.5em; /* Adjust as necessary */
     color: #555; /* Or any color that matches your design */
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+    position: relative;
+    right: 16%;
 }
 
 .get-started-btn {
-    padding: 10px 20px;
+    padding: 15px 20px;
     font-size: 1em; /* Adjust as necessary */
     color: #FFF;
     background-color: #000; /* Or any color that matches your design */
-    border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
+    position: relative;
+    right: 48%;
 }
 
 .get-started-btn:hover {
