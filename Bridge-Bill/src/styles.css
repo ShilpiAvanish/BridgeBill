@@ -94,6 +94,7 @@ header {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  color:#000;
 }
 
 .language-selector img {
@@ -140,3 +141,4 @@ main p {
 .make-bigger {
   transform: scale(1.25);
 }
+

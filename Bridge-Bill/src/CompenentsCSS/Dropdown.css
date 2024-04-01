@@ -1,0 +1,60 @@
+.language-selector {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  color: black; /* Make sure the text is visible against a light background */
+  text-transform: none; /* Optional: Style as per the screenshot */
+}
+
+/* Ensure dropdown text is visible before and after hover */
+.dropdown-toggle,
+.dropdown-toggle:hover {
+  color: black;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Align the dropdown right below the button */
+  right: 0;
+  background-color: white; /* Adjust as needed */
+  color: black; /* Text color inside the dropdown */
+  min-width: 160px;
+  border: 1px solid #dddddd;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+
+}
+
+.dropdown-item {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: black; /* Make sure the text is visible */
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu when hovering over the button */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}

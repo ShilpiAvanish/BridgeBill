@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./PDFPopup.css";
+import "/src/CompenentsCSS/PDFPopup.css";
 
 interface PDFPopupProps {
   isOpen: boolean;

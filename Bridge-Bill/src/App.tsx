@@ -1,55 +1,44 @@
-import "./styles.css";
+// App.tsx
 import React, { useState } from "react";
-import ImportPdf from "./ImportPDF.tsx";
+import "./styles.css";
+import ImportPdf from "./Components/ImportPDF";
+import Dropdown from "./Components/DropDown";
 
 function App() {
-  const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [language, setLanguage] = useState("English");
+  const options = ["Spanish", "Mandarin", "French"];
+
   const openPopup = () => setIsPopupOpen(true);
   const closePopup = () => setIsPopupOpen(false);
+  
+  const handleLanguageChange = (newLanguage: string) => {
+    setLanguage(newLanguage);
+  };
 
   return (
-    <body>
-      <div className="container">
-        <header>
-          <div className="language-selector">
-            <span>English</span>
-          </div>
-        </header>
-        <div className="make-bigger">
-          <main>
-            <h1>
-              The billing assistant your <br></br> health deserves.
-            </h1>
-            <p>Your Guide to Clear and Accurate Medical Billing</p>
-            <div>
-              <button className="get-started-btn" onClick={openPopup}>
-                Get Started
-              </button>
-              <ImportPdf isOpen={isPopupOpen} onClose={closePopup} />
-            </div>
-          </main>
+    <div className="container">
+      <header>
+        <div className="language-selector">
+          <Dropdown options={options} selected={language} onSelect={handleLanguageChange} />
         </div>
+      </header>
+      <div className="make-bigger">
+        <main>
+          <h1>
+            The billing assistant your <br /> health deserves.
+          </h1>
+          <p>Your Guide to Clear and Accurate Medical Billing</p>
+          <div>
+            <button className="get-started-btn" onClick={openPopup}>
+              Get Started
+            </button>
+            <ImportPdf isOpen={isPopupOpen} onClose={closePopup} />
+          </div>
+        </main>
       </div>
-    </body>
+    </div>
   );
-
-  // return (
-  //   <div className="App">
-  //     <header className="Title">
-  //       <a className="language-chooser">English</a>
-  //       <p className="Title">
-  //         The billing assistant<br></br> your health deserves.
-  //       </p>
-  //       <a className="subheading">
-  //         Your Guide to Clear and Accurate Medical Billing
-  //       </a>
-  //       <div>
-  //         <button onClick={openPopup}>Insert PDF</button>
-  //         <ImportPdf isOpen={isPopupOpen} onClose={closePopup} />
-  //       </div>
-  //     </header>
-  //   </div>
-  // );
 }
 
 export default App;
