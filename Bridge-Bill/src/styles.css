@@ -130,7 +130,7 @@ main p {
   cursor: pointer;
   transition: background-color 0.3s;
   position: relative;
-  right: 48%;
+  right: 49%;
 }
 
 .get-started-btn:hover {
