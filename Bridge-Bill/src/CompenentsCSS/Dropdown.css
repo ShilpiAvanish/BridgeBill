@@ -31,16 +31,16 @@
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%; /* Align the dropdown right below the button */
   right: 0;
   background-color: white; /* Adjust as needed */
   color: black; /* Text color inside the dropdown */
-  min-width: 160px;
-  border: 1px solid #dddddd;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  min-width: 100%;
   z-index: 1000;
   top: 100%; /* Adjust as needed */
   margin-top: 0; /* Ensure there's no margin creating a gap */
+  padding: 0; 
+  box-sizing: border-box; 
+  width: auto;
 
 
 }
@@ -57,6 +57,8 @@
 
 .dropdown-item:hover {
   background-color: #f1f1f1;
+  
+
 }
 
 /* Show the dropdown menu when hovering over the button */

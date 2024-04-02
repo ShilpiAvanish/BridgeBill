@@ -39,19 +39,13 @@ const PDFPopup: React.FC<PDFPopupProps> = ({ isOpen, onClose }) => {
             className="upload-icon"
             onClick={() => document.getElementById("fileInput")?.click()}
           >
-            {/* Replace this SVG with your upload icon */}
-            <svg
-              viewBox="0 0 24 24"
-              width="48"
-              height="48"
-              stroke="currentColor"
-              strokeWidth="2"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path>
-            </svg>
+          <div>
+            <img 
+              src="cloud-upload.jpeg" 
+              width="48" 
+              height="48" 
+              alt="Upload Icon"
+            />
           </div>
           <p>Drag and Drop here</p>
           <span>or</span>
