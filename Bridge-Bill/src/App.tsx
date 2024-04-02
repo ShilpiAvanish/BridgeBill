@@ -7,7 +7,7 @@ import Dropdown from "./Components/DropDown";
 function App() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [language, setLanguage] = useState("English");
-  const options = ["English", "Spanish", "Mandarin", "French"];
+  const options = ["English", "Spanish", "Mandarin", "Arabic"];
 
 
   const openPopup = () => setIsPopupOpen(true);
