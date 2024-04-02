@@ -27,31 +27,30 @@ const Dropdown: React.FC<DropdownProps> = ({ options, selected, onSelect }) => {
 
   const handleOptionClick = (value: string) => {
     onSelect(value);
-    setIsOpen(false);
   };
+  
 
   return (
     <div className="dropdown" ref={toggleRef}>
       <button
         onMouseOver={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
         className="dropdown-toggle"
       >
         {selected}
       </button>
       {isOpen && (
-        <ul
-          className="dropdown-menu"
-          onMouseOver={() => setIsOpen(true)}
-          onMouseLeave={() => setIsOpen(false)}
-        >
-          {options.map((option, index) => (
-            <li key={index} className="dropdown-item" onClick={() => handleOptionClick(option)}>
-              {option}
-            </li>
-          ))}
-        </ul>
-      )}
+  <ul
+    className="dropdown-menu"
+    onMouseOver={() => setIsOpen(true)}
+    onMouseLeave={() => setIsOpen(false)}
+  >
+    {options.filter(option => option !== selected).map((option, index) => (
+      <li key={index} className="dropdown-item" onClick={() => handleOptionClick(option)}>
+        {option}
+      </li>
+    ))}
+  </ul>
+)}
     </div>
   );
 };

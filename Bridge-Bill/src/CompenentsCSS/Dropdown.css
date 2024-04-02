@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   margin-top: 1rem;
-  margin-right: 1rem;
+  margin-right: 3rem;
 }
 
 .dropdown {
@@ -19,6 +19,7 @@
   font-size: 16px;
   color: black; /* Make sure the text is visible against a light background */
   text-transform: none; /* Optional: Style as per the screenshot */
+  margin-bottom: 0; 
 }
 
 /* Ensure dropdown text is visible before and after hover */
@@ -38,6 +39,9 @@
   border: 1px solid #dddddd;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1000;
+  top: 100%; /* Adjust as needed */
+  margin-top: 0; /* Ensure there's no margin creating a gap */
+
 
 }
 
@@ -47,6 +51,7 @@
   display: block;
   color: black; /* Make sure the text is visible */
   font-family: 'Open Sans', sans-serif;
+  margin-right: -50%;
 
 }
 
