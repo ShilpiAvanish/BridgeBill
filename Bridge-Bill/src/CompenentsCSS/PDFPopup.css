@@ -1,77 +1,116 @@
 .popup-overlay {
-    background: rgba(0, 0, 0, 0.7);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000; /* Ensure it's above other content */
-  }
-  
-  .popup-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 550px; /* Adjust based on your design requirements */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .upload-area {
-    border: 2px dashed #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px); /* This will blur the background */
+  -webkit-backdrop-filter: blur(4px); /* For Safari */
+  pointer-events: all;
+}
+
+.container.blur .make-bigger {
+  pointer-events: none; /* Disable interactions */
+}
+
+.popup-content {
+  background: rgb(242, 242, 242);
+  padding: 20px;
+  border-radius: 10px;
+  width: 550px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-area {
     border-radius: 10px;
     padding: 30px;
     position: relative;
     margin-bottom: 20px;
-  }
-  
-  .upload-icon {
-    margin-bottom: 20px;
-    cursor: pointer;
-  }
-  
-  p {
-    margin: 10px 0;
-    font-size: 1em;
-    color: #333;
-  }
-  
-  span {
-    display: block;
-    margin: 20px 0;
-    color: #aaa;
-    font-size: 0.9em;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 1em;
-    color: #fff;
-    background-color: #333;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.2s ease-in-out;
-    margin-top: 10px;
-  }
-  
-  button:hover {
-    background-color: #555;
-  }
-  
-  .close-btn {
-    background-color: transparent;
-    color: #333;
-    border: 1px solid #333;
-  }
-  
-  .upload-btn {
-    /* Styling for the upload button if you added one */
-  }
-  
-  /* Additional styles to adjust padding and layout for your design */
-  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px; /* Adjust based on your content */
+}
+
+.dragdrop {
+  width: 100%; /* Full width of the container */
+  margin: 0px 0;
+  margin-left: 0px;
+  font-size: 1.5em;
+  color: #333;
+  text-align: center; /* Center the text */
+}
+
+
+
+.upload-icon {
+  margin-bottom: 10px; /* Adjust the space between icon and text */
+  cursor: pointer;
+  display: inline-block; /* Make it inline to center align with text */
+}
+
+span {
+  margin: 10px 0;
+  color: #333;
+  font-size: 0.9em;
+}
+
+.select-file-btn {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+
+}
+
+.popup-actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.close-btn {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.upload-btn {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #333;
+}
+
+/* Hide the default file input button */
+input[type="file"] {
+  display: none;
+}
+
+/* You can add more styles as needed */

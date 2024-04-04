@@ -9,7 +9,6 @@ function App() {
   const [language, setLanguage] = useState("English");
   const options = ["English", "Spanish", "Mandarin", "Arabic"];
 
-
   const openPopup = () => setIsPopupOpen(true);
   const closePopup = () => setIsPopupOpen(false);
   
@@ -20,7 +19,7 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div className={`container ${isPopupOpen ? 'blur' : ''}`}>
       <header>
         <div className="language-selector">
           <Dropdown options={options} selected={language} onSelect={handleLanguageChange} />
@@ -32,14 +31,12 @@ function App() {
             The billing assistant your <br /> health deserves.
           </h1>
           <p>Your Guide to Clear and Accurate Medical Billing</p>
-          <div>
-            <button className="get-started-btn" onClick={openPopup}>
-              Get Started
-            </button>
-            <ImportPdf isOpen={isPopupOpen} onClose={closePopup} />
-          </div>
+          <button className="get-started-btn" onClick={openPopup}>
+            Get Started
+          </button>
         </main>
       </div>
+      {isPopupOpen && <ImportPdf isOpen={isPopupOpen} onClose={closePopup} />}
     </div>
   );
 }
