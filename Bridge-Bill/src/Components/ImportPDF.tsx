@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "/src/CompenentsCSS/PDFPopup.css";
+import { Link } from "react-router-dom"
 
 interface PDFPopupProps {
   isOpen: boolean;
@@ -49,7 +50,10 @@ const PDFPopup: React.FC<PDFPopupProps> = ({ isOpen, onClose }) => {
         </div>
         <div className="popup-actions">
           <button className="close-btn" onClick={onClose}>Close</button>
-          <button className="upload-btn" onClick={handleFileSubmit}>Upload</button>
+          <button className="upload-btn" onClick={handleFileSubmit}>
+            <Link to = "/BillAnalysis"> Upload </Link>
+    
+            </button>
         </div>
       </div>
     </div>
