@@ -32,4 +32,67 @@ print(five_digit_numbers)
 
     #Make all the code to llook like taking from table
     
+    #Flask
+
+import pandas as pd
+
+def find_description_by_code(file_path, code):
+    # Load the Excel file
+    df = pd.read_excel(file_path)
+    
+    # Assuming the code is in the first column and the description in the second,
+    # adjust the column indices [0] and [1] if this is not the case.
+    code_column_index = 0
+    description_column_index = 1
+
+    # Search for the code
+    row = df[df.iloc[:, code_column_index] == code]
+    
+    if not row.empty:
+        # If the code is found, return the description
+        return row.iloc[0, description_column_index]
+    else:
+        # If the code is not found, return a message stating that
+        return "Code not found."
+
+# Example usage
+file_path = '/home/avanish/code/ConvergentCloneCode/Convergent-Health-Hospital2.0/PDFPuller/ConsumerFriendlyDescriptor.xlsx'
+for codes in five_digit_numbers:
+    updatedCode = int(codes)
+    description = find_description_by_code(file_path, updatedCode)
+    print(description)
+
+
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+import PyPDF2
+import os
+
+app = Flask(__name__)
+CORS(app)  # This enables CORS for all domains; adjust as necessary for production
+
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    file = request.files['file']
+    if file:
+        # Assuming the PDF file needs to be saved temporarily for processing
+        temp_path = 'temp_uploaded.pdf'
+        file.save(temp_path)
+
+        # Open, read, and process the PDF file
+        with open(temp_path, 'rb') as pdf_file:
+            pdfReader = PyPDF2.PdfReader(pdf_file)
+            pageObj = pdfReader.pages[0]
+            text = pageObj.extract_text()
+
+        # Remove the temporary file if no longer needed
+        os.remove(temp_path)
+
+        # Process your PDF data here (this example simply returns extracted text)
+        return jsonify({'message': 'File processed successfully', 'data': text})
+    return jsonify({'error': 'No file provided'}), 400
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
+
 
