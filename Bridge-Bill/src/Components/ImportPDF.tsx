@@ -23,7 +23,7 @@ const PDFPopup: React.FC<PDFPopupProps> = ({ isOpen, onClose }) => {
       formData.append('file', selectedFile);
 
       try {
-        const response = await fetch('http://localhost:5173/upload', {
+        const response = await fetch('http://localhost:8080/upload', {
           method: 'POST',
           body: formData,
         });

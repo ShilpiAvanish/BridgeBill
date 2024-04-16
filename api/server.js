@@ -17,6 +17,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
     // Use absolute path for Python script and uploaded file
     const scriptPath = path.join(__dirname, 'ImportPDF.py');
     const pythonExecutable = 'python3'; // or 'python3' if that's the command for your environment
+    
 
     // Execute a Python script using the uploaded file path
     exec(`${pythonExecutable} ${scriptPath} ${filePath}`, (error, stdout, stderr) => {
@@ -35,7 +36,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
 });
 
 // Specify the port to listen on
-const PORT = process.env.PORT || 5173;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
