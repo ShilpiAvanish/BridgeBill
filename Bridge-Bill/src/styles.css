@@ -71,12 +71,15 @@ html {
   padding: 0;
   height: 100%;
   font-family: "Arial", sans-serif; /* Replace with the font of your choice */
-  background: #fff; /* Or any color that matches your design */
+  background-image: url('/upscaled-8x-medical_people 1.jpg'); /* Update the path to where your image is stored */
+  background-size: cover;
+  background-position: center;
   color: #000; /* Or any color that matches your design */
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 
 .container {
   text-align: center;
@@ -141,6 +144,3 @@ main p {
 .make-bigger {
   transform: scale(1.25);
 }
-
-
-

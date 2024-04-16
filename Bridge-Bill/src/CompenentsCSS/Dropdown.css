@@ -36,7 +36,6 @@
   display: none;
   position: absolute;
   right: 0;
-  background-color: white; /* Adjust as needed */
   color: black; /* Text color inside the dropdown */
   min-width: 100%;
   z-index: 1000;

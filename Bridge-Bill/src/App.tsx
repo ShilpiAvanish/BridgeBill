@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./styles.css";
 import ImportPdf from "./Components/ImportPDF";
 import Dropdown from "./Components/DropDown";
+import backgroundImage from '/Users/prestonbui/College/Convergent/Convergent-Health-Hospital2.0/Bridge-Bill/upscaled-8x-medical_people 1.jpg';
 
 function App() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);

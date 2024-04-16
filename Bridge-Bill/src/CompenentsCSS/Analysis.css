@@ -1,0 +1,52 @@
+.analysis-container {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto; /* Center in the page */
+}
+ .bill-summary-section {
+  text-align: center; /* Center content */
+}
+ .bill-summary-title {
+  margin-bottom: 20px;
+}
+ .status-indicators {
+  display: inline-block; /* Align the status indicators properly */
+  margin-bottom: 30px;
+}
+ .status-item {
+  margin: 5px 0;
+}
+ .check {
+  color: green;
+}
+ .alert {
+  color: red;
+}
+ .cost-breakdown {
+  margin-top: 50px; /* Space from the summary to the breakdown */
+}
+ .cost-breakdown-item {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px; /* Space between items */
+}
+ /* Additional CSS to ensure the page content is centered and responsive */
+body, html {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the start of the flex container */
+  min-height: 100vh; /* Full height */
+}
+ @media (max-width: 800px) {
+  .analysis-container {
+    width: 100%;
+    box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+    padding: 0 20px; /* Padding on small screens */
+  }
+}
+
