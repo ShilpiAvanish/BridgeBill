@@ -30,7 +30,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     pdf_path = sys.argv[1]
-    descriptor_file_path = '/home/avanish/code/ConvergentCloneCode/Convergent-Health-Hospital2.0/api/ConsumerFriendlyDescriptor.xlsx'
+    descriptor_file_path = '../api/ConsumerFriendlyDescriptor.xlsx'
 
     cpt_codes = extract_cpt_codes(pdf_path)
     descriptions = find_description_by_code(cpt_codes, descriptor_file_path)
