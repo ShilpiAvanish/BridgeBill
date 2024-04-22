@@ -9,6 +9,8 @@ import{
   Route,
 } from "react-router-dom";
 import Analysis from './Pages/Analysis.tsx';
+import PricingPlans from './Pages/Subscriptions.tsx';
+import Stripe from './Pages/Subscriptions.tsx';
 
   const router = createBrowserRouter([
     {
@@ -18,6 +20,14 @@ import Analysis from './Pages/Analysis.tsx';
     {
       path: "/BillAnalysis",
       element: <Analysis/>,
+    },
+    {
+      path: "/Subscriptions",
+      element: <PricingPlans/>,
+    },
+    {
+      path: "/Stripe",
+      element: <Stripe/>,
     },
   ]);
 

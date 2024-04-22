@@ -1,3 +1,11 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Arial", sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -7,37 +15,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.Title {
-  background-color: #ffffff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  font-size: calc(72px + 2vmin);
-  font-weight: 700;
-  color: black;
-  text-align: left;
-  margin-left: calc(90px + 1vmin);
-}
-
-.App-link {
-  color: white;
-  background-color: black;
-  font-size: calc(30px);
-  font-weight: 400;
-  text-align: left;
-  padding: 15px 15px; /* Adjust padding as needed */
-  border-radius: 12px;
-  text-decoration: none; /* Remove underline */
-  margin-top: 20px;
-}
 
 .subheading {
   color: #666666;
@@ -53,31 +30,25 @@
   font-size: 24px; /* Adjust the font size */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /*
   
   */
-body,
-html {
+body{
+
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: "Arial", sans-serif; /* Replace with the font of your choice */
-  background-image: url('/upscaled-8x-medical_people 1.jpg'); /* Update the path to where your image is stored */
+  /* background-image: url('/home/avanish/code/ConvergentCloneCode/Convergent-Health-Hospital2.0/Bridge-Bill/src/images/backgroundimg.png'); /* Update the path to where your image is stored */
+  /* background-repeat: no-repeat; 
   background-size: cover;
   background-position: center;
+  background-size: 100% 120%; */
   color: #000; /* Or any color that matches your design */
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #000;
 }
 
 
@@ -93,6 +64,7 @@ header {
   margin: 20px;
 }
 
+
 .language-selector {
   cursor: pointer;
   display: inline-flex;
@@ -106,26 +78,62 @@ header {
   height: auto;
 }
 
-main h1 {
+/* Styles for Main Content */
+.main-content h1 {
+  font-size: calc(10px + 2vmin);
+  color: #000; /* Adjust the color to fit your design */
+  text-align: left;
+  margin: 0;
+  font-weight: 700;
+}
+
+.main-content p {
+  font-size: calc(5px + 1vmin);
+  color: #555;
+  text-align: left;
+}
+
+/* Button Styles */
+.get-started-btn {
+  padding: 15px 20px;
+  font-size: calc(5px + 1vmin);
+  color: #fff;
+  background-color: #007bff; /* Blue background */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+.get-started-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Language-specific Styles */
+.title.english {
   font-size: 3.5em;
   font-weight: 750;
-  margin-bottom: 0.25em;
+  margin-bottom: 0em;
   color: #000;
   text-align: left;
   position: relative;
-  right: 10%;
-  letter-spacing: -3px;
+  right: 40%;
+  letter-spacing: -4px;
+  margin-top: 24%;
+  /* English-specific styles */
 }
 
-main p {
-  font-size: 1.5em; /* Adjust as necessary */
-  color: #555; /* Or any color that matches your design */
+.subtitle.english {
+  font-size: 1.25em; /* Adjust as necessary */
+  color: black; /* Or any color that matches your design */
   margin-bottom: 1em;
   position: relative;
-  right: 16%;
+  right: 39.5%;
+  margin-top: 2%;
+  /* English-specific styles */
 }
 
-.get-started-btn {
+.get-started-btn.english {
   padding: 15px 20px;
   font-size: 1em; /* Adjust as necessary */
   color: #fff;
@@ -134,13 +142,114 @@ main p {
   cursor: pointer;
   transition: background-color 0.3s;
   position: relative;
-  right: 49%;
+  right: 79%;
+  /* English-specific styles */
 }
 
-.get-started-btn:hover {
-  background-color: #333; /* Or any color that matches your design */
+.title.spanish {
+  font-size: 3.3em;
+  font-weight: 750;
+  margin-bottom: 0.1em;
+  color: #000;
+  text-align: left;
+  position: relative;
+  right: 29%;
+  letter-spacing: -4px;
+  margin-top: 20%;
+  
+  /* English-specific styles */
 }
 
-.make-bigger {
-  transform: scale(1.25);
+.subtitle.spanish {
+  font-size: 1.3em; /* Adjust as necessary */
+  color: black; /* Or any color that matches your design */
+  margin-bottom: 1em;
+  position: relative;
+  right: 29%;
+  margin-top: 2%;
+  /* English-specific styles */
 }
+
+.get-started-btn.spanish {
+  padding: 15px 20px;
+  font-size: 1.1em; /* Adjust as necessary */
+  color: #fff;
+  background-color: #000; /* Or any color that matches your design */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  right: 70%;
+  /* English-specific styles */
+}
+
+.title.mandarin {
+  font-size: 3.5em;
+  font-weight: 750;
+  margin-bottom: 0.1em;
+  color: #000;
+  text-align: left;
+  position: relative;
+  right: 30%;
+  letter-spacing: -3px;
+  margin-top: 20%;
+  /* English-specific styles */
+}
+
+.subtitle.mandarin {
+  font-size: 1.5em; /* Adjust as necessary */
+  color: #555; /* Or any color that matches your design */
+  margin-bottom: 1em;
+  position: relative;
+  right: 30%;
+  /* English-specific styles */
+}
+
+.get-started-btn.mandarin {
+  padding: 15px 20px;
+  font-size: 1em; /* Adjust as necessary */
+  color: #fff;
+  background-color: #000; /* Or any color that matches your design */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  right: 74%;
+  /* English-specific styles */
+}
+
+.title.arabic {
+  font-size: 3.5em;
+  font-weight: 750;
+  margin-bottom: 0.1em;
+  color: #000;
+  text-align: left;
+  position: relative;
+  right: 40%;
+  letter-spacing: -3px;
+  margin-top: 20%;
+  /* English-specific styles */
+}
+
+.subtitle.arabic {
+  font-size: 1.5em; /* Adjust as necessary */
+  color: #555; /* Or any color that matches your design */
+  margin-bottom: 1em;
+  position: relative;
+  right: 40%;
+  /* English-specific styles */
+}
+
+.get-started-btn.arabic {
+  padding: 15px 20px;
+  font-size: 1em; /* Adjust as necessary */
+  color: #fff;
+  background-color: #000; /* Or any color that matches your design */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  right: 87%;
+  /* English-specific styles */
+}
+

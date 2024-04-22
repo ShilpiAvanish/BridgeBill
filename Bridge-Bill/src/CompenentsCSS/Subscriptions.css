@@ -1,0 +1,102 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.heading {
+    font-size:50px;
+    color: black;
+    margin-right: 90%;
+    
+}
+
+.pricing-plans {
+    display: flex;
+    justify-content: flex-start; /* Aligns the cards to the start of the container */
+    gap: 56px;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+.plan {
+    background-color: #e9e4e4;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 50px;
+    padding-top: 10px;
+    width: 190px;
+    height: 290px;
+    flex-shrink: 0; /* Fixed width for all cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between items */
+}
+.plan-title, .plan-price{
+    margin-right: 10%;
+}
+
+.plan-title {
+    text-align: left;
+    margin-top: 10%;
+    font-size: 1.5em; /* Aligns the plan title and price to the left */
+}
+
+.plan-price {
+    color: #000; /* Black color for price */
+    font-size: 40px;
+    font-weight: 500;
+    text-align: left;
+    margin-top: -7%;
+}
+
+.plan-feature {
+    text-align: left; /* Aligns the features text to the left */
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.plan-button {
+    background-color: #3A94E7; /* Blue color for buttons */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.plan-button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive styles */
+@media (max-width: 980px) {
+    .pricing-plans {
+        justify-content: center; /* Center cards on medium screens */
+    }
+}
+
+@media (max-width: 680px) {
+    .pricing-plans {
+        flex-direction: column;
+        align-items: center;
+    }
+    .plan {
+        width: 100%; /* Full width for mobile */
+        margin: 10px 0; /* Stack them with space in between */
+    }
+}
