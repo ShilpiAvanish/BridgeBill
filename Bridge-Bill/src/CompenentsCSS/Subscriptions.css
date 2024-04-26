@@ -1,7 +1,8 @@
 /* styles.css */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: white;
+    background-color: #eff1f2;
+    /* background-color: ; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,14 +27,17 @@ body {
     gap: 56px;
     flex-wrap: wrap;
     margin-top: 5%;
+    border-color: black;
 }
 
 .plan {
-    background-color: #e9e4e4;
+    background-color: #f5f5f5;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 50px;
+    border-color: black;
+    box-shadow: 0 8px 8px rgba(0,0,0,0.1);
+    padding: 30px;
     padding-top: 10px;
+    padding-bottom: 50px;
     width: 190px;
     height: 290px;
     flex-shrink: 0; /* Fixed width for all cards */

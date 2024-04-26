@@ -11,6 +11,7 @@ import{
 import Analysis from './Pages/Analysis.tsx';
 import PricingPlans from './Pages/Subscriptions.tsx';
 import Stripe from './Pages/Subscriptions.tsx';
+import Email from './Pages/Email.tsx';
 
   const router = createBrowserRouter([
     {
@@ -29,6 +30,11 @@ import Stripe from './Pages/Subscriptions.tsx';
       path: "/Stripe",
       element: <Stripe/>,
     },
+    {
+      path: "/EmailSender",
+      element: <Email/>,
+    }
+
   ]);
 
 
