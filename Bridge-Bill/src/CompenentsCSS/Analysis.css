@@ -1,6 +1,10 @@
+.body{
+  background-color: black;
+}
 .analysis-container {
   font-family: 'Arial', sans-serif;
   color: #333;
+
   max-width: 800px;
   margin: 0 auto; /* Center in the page */
 }
@@ -9,6 +13,10 @@
 }
  .bill-summary-title {
   margin-bottom: 20px;
+  margin-top: 50px;
+  font-size: 350%;
+  margin-right: 40%;
+  font-weight: 500;
 }
  .status-indicators {
   display: inline-block; /* Align the status indicators properly */
@@ -29,9 +37,10 @@
  .cost-breakdown-item {
   background: #FFFFFF;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+  border-radius: 3%;
   padding: 20px;
   margin-bottom: 20px; /* Space between items */
+  cursor: pointer;
 }
  /* Additional CSS to ensure the page content is centered and responsive */
 body, html {
@@ -49,4 +58,39 @@ body, html {
     padding: 0 20px; /* Padding on small screens */
   }
 }
+.payment-info {
+  display: flex;
+  align-items: center;
+  background-color: #F8F8F8; /* Light grey background */
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 0.9em; /* Adjust the font size as needed */
+  position: relative; /* Added to position the checkmark absolutely */
+}
+.payment-status-icon {
+  position: absolute; /* Position the checkmark absolutely */
+  left: 10px; /* Adjust the space from the left as needed */
+  top: 50%;
+  transform: translateY(-50%); /* Center it vertically */
+}
+.payment-details {
+  margin-left: 30px; /* Add left margin to make space for the checkmark */
+  flex-grow: 1;
+}
+.status-icon {
+  font-size: 1.5em; /* Adjust the icon size as needed */
+}
+.payment-info .check {
+  color: #4CAF50; /* Green color */
+}
+.payment-info .alert {
+  color: #F44336; /* Red color */
+}
+
+
+
+
+
+
 

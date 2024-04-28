@@ -64,13 +64,14 @@ span {
 }
 
 .select-file-btn {
-  background-color: #333;
+  background-color: #3A94E7;
   color: white;
   padding: 10px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
   border-radius: 10px;
+  font-size: 14px;
 
 }
 
@@ -86,7 +87,7 @@ button {
   color: #fff;
   background-color: #333;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   outline: none;
   transition: background-color 0.2s ease-in-out;
