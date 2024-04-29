@@ -9,7 +9,7 @@ type CostBreakdownType = {
   duplicate?: boolean;
   showPayment?: boolean; // You need to add this to the type if you're using it in your state
 };
-const App: React.FC = () => {
+const Analysis: React.FC = () => {
   const [costBreakdowns, setCostBreakdowns] = useState<CostBreakdownType[]>([
     {
       title: "ROUTINE VENIPUNCTURE - 36415",
@@ -63,59 +63,52 @@ const App: React.FC = () => {
   return (
     <div className="analysis-container">
       <div className="bill-summary-section">
-        <div className="bill-summary-title">Your Bill Summary</div>
-        <div className="status-indicators">
-          <p className="status-item">
-            <span className="status-icon check">✅</span>
-            No errors found in Cost
-          </p>
-          <p className="status-item">
-            <span className="status-icon alert">❌</span>
-            2 Potential Errors in Cost
-          </p>
-        </div>
-        <h2 className="cost-breakdown-title">Cost Breakdown</h2>
+        <h1 className="bill-summary-title">Your Bill Summary</h1>
+        <a href="/EmailSender" className="next-steps-button">Next Steps</a>
       </div>
+      <div className="status-indicators">
+        <p className="status-item">
+        <p className="status-item">
+          <span className="status-icon check">✔</span>
+          6 Charges Posted Correctly
+        </p>
+          <span className="status-icon alert">✖</span>
+          1 Charge is Repeated on the Bill
+        </p>
+        <p className="status-item">
+          <span className="status-icon alert">✖</span>
+          1 Charge if Off Typical Procedure Price
+        </p>
+      </div>
+      <h2 className="cost-breakdown-title">Cost Breakdown</h2>
       <div className="cost-breakdown">
         {costBreakdowns.map((item, index) => (
           <div className="cost-breakdown-item" key={index} onClick={() => togglePayment(index)}>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
             {item.showPayment && (
-              <div className={`payment-info ${item.paymentWithinRange ? 'check' : 'alert'}`}>
-                <p>Your Payment: {item.payment}</p>
-                <p>Average Payment: {item.averagePayment}</p>
-                {item.paymentWithinRange
-                  ? <span className="status-icon check">✅</span>
-                  : <span className="status-icon alert">❌</span>
-                }
-                {
-                  <p>
-                  {item.duplicate
-                    ? "CPT code detected twice, the charge is repeated on the bill"
-                    : item.paymentWithinRange
-                      ? "This procedure was within the range of a typical procedure in the United States."
-                      : "This procedure was very off of a typical procedure in the United States."
-                  }
-                </p>
-                
-                
-                
-                /* <p>{
-                  if(item.paymentWithinRange)
-                    {
-
-                    }
-                
-                item.paymentWithinRange ? "This procedure was within the range of a typical procedure in the United States." : "This procedure was very off of a typical procedure in the United States."
-                
-                }</p> */}
-              </div>
-            )}
-          </div>
+    <div className={`payment-info ${item.paymentWithinRange ? 'check' : 'alert'}`}>
+      <span className="payment-status-icon status-icon">
+        {item.paymentWithinRange ? <span className="status-icon check">✔</span> : <span className="status-icon alert">✖</span>}
+      </span>
+      <div className="payment-details">
+  <p><span className="label">Your Payment: {item.payment}</span></p>
+  <p><span className="label">Average Payment: {item.averagePayment}</span></p>
+  <p>
+    {item.duplicate
+      ? "CPT code detected twice, the charge is repeated on the bill"
+      : item.paymentWithinRange
+        ? "This procedure was within the range of a typical procedure in the United States."
+        : "This procedure was very off of a typical procedure price in the United States."
+    }
+  </p>
+</div>
+    </div>
+  )}
+</div>
         ))}
       </div>
     </div>
   );
 };
-export default App;
+export default Analysis;

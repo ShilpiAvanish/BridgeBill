@@ -1,0 +1,90 @@
+/* BillingNotice.css */
+
+
+
+.billing-notice {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    color: #000;
+    font-family:inherit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300px;
+    letter-spacing: -0.6px;
+    background-color: #eff1f2;;
+    /* transform: size(); */
+  }
+  
+  .billing-header,
+  .patient-info,
+  .invoice-info,
+  .footer-info {
+    margin-bottom: 20px;
+  }
+  
+  .billing-header p,
+  .patient-info p,
+  .footer-info p {
+    margin: 0;
+    padding-bottom: 4px;
+  }
+  
+  .invoice-info p {
+    margin-bottom: 15px;
+  }
+/*   
+  .billing-header p:first-child,
+  .patient-info p:first-child {
+    font-weight: bold;
+  } */
+  
+  .footer-info p {
+    margin-bottom: 5px;
+  }
+  
+  .footer-info p:nth-last-child(-n+4) {
+    font-size: 0.9em;
+    color: #555;
+  }
+  .bullet-pointed-list li.indented {
+    padding-left: 400px; /* Indent specific list item */
+  }
+
+  
+  .copy-button {
+    
+    background-color: #3A94E7; 
+    font-weight: bold;
+    font-family: Inter;
+    color: white;
+    border: none;
+    padding: 5px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 250px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+    transition: background-color 0.3s ease; 
+    
+}
+  
+  .copy-button:hover {
+    background-color: #276cac; /* Darker shade of teal for hover state */
+  }
+  
+  /* Optionally: align the button to the center if it's the only element */
+  .copy-button:only-child {
+    display: block;
+    margin: 16px auto; /* Centers the button if it's the only child */
+  }
+  .size{
+    transform: scale(.9);
+  }

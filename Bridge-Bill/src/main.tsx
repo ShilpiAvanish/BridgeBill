@@ -19,7 +19,7 @@ import Email from './Pages/Email.tsx';
       element: <App />,
     },
     {
-      path: "/BillAnalysis",
+      path: "/Analysis",
       element: <Analysis/>,
     },
     {
