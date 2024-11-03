@@ -20,6 +20,7 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route('/upload', methods=['POST'])
+
 def upload_file():
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'})
